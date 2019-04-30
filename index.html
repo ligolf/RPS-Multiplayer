@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+    <title>Rock Paper Scissors Multiplayer Online Game</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <br>
+
+        <!-- Jumbotron -->
+        <div class="jumbotron">
+            <h1 class="text-center">RPS Online Multiplayer Game!</h1>
+        </div>
+
+
+
+        <!-- inputting names for player 1 and player 2 -->
+
+        <div class="row">
+            <div class="col-lg-4">
+
+                <form role="form">
+                    <div class="form-group row">
+                        <label for="player1">Player 1 Name:</label>
+                        <input class="form-control" id="player1" type="text">
+                        <button class="btn btn-large" id="add-name1" type="submit">Add Player 1</button>
+
+                    </div>
+                </form>
+                <form role="form">
+                    <div class="form-group row">
+                        <label for="player2">Player 2 Name:</label>
+                        <input class="form-control" id="player2" type="text">
+                        <button class="btn btn-large" id="add-name2" type="submit">Add Player 2</button>
+                        <button class="btn btn-large" id="restart" type="submit">Restart</button>
+
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-1">
+                <button class="btn btn-large" id="rock" type="submit">Rock</button>
+                <button class="btn btn-large" id="paper" type="submit">Paper</button>
+                <button class="btn btn-large" id="scissors" type="submit">Scissors</button>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="card card-default">
+                    <div class="card-header">
+                        <p id="Player1Choose"></p>
+                        <br>
+                        <p id="Player2Choose"></p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- assigning names to player's 1 and 2.  and limitting the game to 2 players -->
+
+        <p id="error"></p>
+
+        <div class="row">
+
+            <div class="col-lg-5">
+                <div class="card card-default">
+                    <div class="card-header">
+                        <p>Player 1: </p>
+                        <p id="player1"></p>
+                        <p>Wins : </p>
+                        <p id="p1wins"></p>
+                        <p>Losses : </p>
+                        <p id="p1losses"></p>
+
+                        <br>
+
+                        <p>Player 2: </p>
+                        <p id="player2"></p>
+                        <p>Wins : </p>
+                        <p id="p2wins"></p>
+                        <p>Losses : </p>
+                        <p id="p2losses"></p>
+
+                        <br>
+                        <p>Ties : </p>
+                        <p id="ties"></p>
+
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-6">
+                <div class="card card-default">
+                    <div class="card-header">
+                        <form role="form">
+                            <div class="form-group row">
+                                <label for="chat-input">chat:</label>
+                                <input class="form-control" id="chat-input" type="text"><button class="btn btn-large"
+                                    id="add-chat" type="submit">Submit</button>
+
+                            </div>
+                        </form>
+
+                    </div>
+                    <div class="card-body">
+                        <p id="chat1"></p>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    </div>
+    <script>
+
+        $("#player1").text(player1);
+        $("#player2").text(player2);
+
+
+    </script>
+
+
+
+    <script src="assets/Javascript/game.js"></script>
+</body>
+
+</html>
